@@ -8,11 +8,16 @@ client.login(process.env.BOTTOKEN);
 
 client.once('ready',() => {
     console.log('GATTA is online!');
-})
+});
 
 
 
 
+const commandHandler = require('./commands');
+client.on("message", commandHandler);
+
+
+    
 
 
 
